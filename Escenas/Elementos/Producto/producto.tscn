@@ -1,11 +1,42 @@
-[gd_scene format=3 uid="uid://yh8efx5ajqqs"]
+[gd_scene load_steps=5 format=3 uid="uid://yh8efx5ajqqs"]
 
-[node name="Producto" type="RigidBody2D"]
+[ext_resource type="PackedScene" uid="uid://brn0fhoh7u42" path="res://Componentes/drag_componente.tscn" id="1_3wly2"]
+[ext_resource type="Texture2D" uid="uid://bdjgiuq25mv8m" path="res://icon.svg" id="1_f063f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f063f"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_05d2n"]
+size = Vector2(128, 128)
+
+[node name="Producto" type="RigidBody2D" groups=["Productos"]]
+position = Vector2(284, 121)
+collision_mask = 3
+metadata/_edit_group_ = true
 
 [node name="spr_producto" type="Sprite2D" parent="."]
+texture = ExtResource("1_f063f")
 
-[node name="area2d_producto" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
 
-[node name="cs_area_producto" type="CollisionShape2D" parent="area2d_producto"]
+[node name="cs_area_producto" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_f063f")
 
 [node name="cs_producto" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_05d2n")
+
+[node name="drag_componente" parent="." instance=ExtResource("1_3wly2")]
+
+[node name="info" type="Label" parent="." groups=["Info_label"]]
+offset_left = -46.0
+offset_top = -89.0
+offset_right = 44.0
+offset_bottom = -66.0
+text = "Prueba info"
+
+[node name="boton" type="Button" parent="."]
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+flat = true

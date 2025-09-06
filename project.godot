@@ -18,13 +18,19 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=640
 window/size/viewport_height=360
-window/size/window_width_override=1360
-window/size/window_height_override=768
+window/size/window_width_override=800
+window/size/window_height_override=600
+window/stretch/mode="viewport"
 
 [editor]
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[global_group]
+
+Productos="Todos los elementos que sean productos."
+Info_label="Todas las label que dan información al poner el mouse encima"
 
 [rendering]
 

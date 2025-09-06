@@ -1,24 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://babynifkmjdi"]
+[gd_scene load_steps=4 format=3 uid="uid://babynifkmjdi"]
 
 [ext_resource type="Texture2D" uid="uid://bdjgiuq25mv8m" path="res://icon.svg" id="1_plts4"]
 [ext_resource type="PackedScene" uid="uid://yh8efx5ajqqs" path="res://Escenas/Elementos/Producto/producto.tscn" id="2_d25el"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lvu1p"]
-friction = 0.0
-rough = true
-bounce = 0.1
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d25el"]
 size = Vector2(128, 127)
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_d25el"]
-friction = 0.0
 
 [node name="Mundo Demo" type="Node2D"]
 
 [node name="Mesa" type="StaticBody2D" parent="."]
 position = Vector2(275, 306)
-physics_material_override = SubResource("PhysicsMaterial_lvu1p")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Mesa"]
@@ -33,4 +24,3 @@ scale = Vector2(4.26563, 0.820312)
 shape = SubResource("RectangleShape2D_d25el")
 
 [node name="Producto" parent="." instance=ExtResource("2_d25el")]
-physics_material_override = SubResource("PhysicsMaterial_d25el")
