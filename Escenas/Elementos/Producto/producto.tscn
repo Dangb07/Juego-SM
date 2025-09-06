@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://yh8efx5ajqqs"]
+
+[node name="Producto" type="RigidBody2D"]
+
+[node name="spr_producto" type="Sprite2D" parent="."]
+
+[node name="area2d_producto" type="Area2D" parent="."]
+
+[node name="cs_area_producto" type="CollisionShape2D" parent="area2d_producto"]
+
+[node name="cs_producto" type="CollisionShape2D" parent="."]

@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://babynifkmjdi"]
+
+[ext_resource type="Texture2D" uid="uid://bdjgiuq25mv8m" path="res://icon.svg" id="1_plts4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d25el"]
+size = Vector2(128, 127)
+
+[node name="Mundo Demo" type="Node2D"]
+
+[node name="Mesa" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Mesa"]
+position = Vector2(365, 306.5)
+scale = Vector2(4.26563, 0.820312)
+texture = ExtResource("1_plts4")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa"]
+position = Vector2(365, 306.09)
+scale = Vector2(4.26563, 0.820312)
+shape = SubResource("RectangleShape2D_d25el")
